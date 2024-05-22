@@ -36,7 +36,7 @@ int main(int argc,char *argv[])
            printf("\n");
 	   printf("For viewing the tags-     ./mp3_tag_reader -v <filename.mp3>\n");
 	   printf("\n");
-	   printf("For editing the tags-     ./mp3_tag_reader -e <modifier>\n");
+	   printf("For editing the tags-     ./mp3_tag_reader -e <filename.mp3> <modifier> <string> \n");
 	   printf("\n");
 	   printf("Modifier Function\n");
 	   printf("-t	    Modify Title Tag\n");
@@ -73,7 +73,7 @@ int main(int argc,char *argv[])
               printf("Use ""./mp3_tag_reader -h"" for help\n");
    
             }
-  }
+     }
       else
          {
              printf("ERROR: Incorrect format of command line arguments.\n");
@@ -81,6 +81,11 @@ int main(int argc,char *argv[])
           }
   
     }
+      else
+         {
+             printf("ERROR: Incorrect format of command line arguments.\n");
+              printf("Use ""./mp3_tag_reader -h"" for help\n");
+          }
 }
 Operation check_operation(char *argv[])
 {
